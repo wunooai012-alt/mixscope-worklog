@@ -1,19 +1,19 @@
-MIXSCOPE 最新測試版：1.7.2（build 172）
+MIXSCOPE 最新測試版：1.7.3（build 173）
 更新日期：2026-10-05（台灣時間）
 適用：macOS 13+，Apple Silicon（arm64）與 Intel（x86_64）
 檔案：MIXSCOPE-latest.zip
-檔案大小：3976288 bytes
-SHA256：6ae5196b32e8960a7db883ebf2ad5d1aac3487d21c5a2d6c679cc17c68353091
+檔案大小：4000491 bytes
+SHA256：843d2e499ce1852325adfb59c52beb8bd01031117176f7f5533ee00e91108ac6
 
 Code → Download ZIP 使用方式：
 1. 解壓 GitHub 下載的 mixscope-worklog-main.zip。
 2. 再解壓裡面的 MIXSCOPE-latest.zip，即可取得 MIXSCOPE.app 與說明文件。
 3. 關閉舊版 App，再將 MIXSCOPE.app 放到 Applications（應用程式）並替換舊版。
 
-1.7.2：配色新增第九套「暗黑灰階」，純黑白灰暗色、灰白訊號線，反相使用空心粒子及ANTI標示。
-Stereo Position直接接收量測快照，新增自己的音訊時間、方向點與Freeze／等待樣本／離線結果狀態；切換顯示模式會解除粒子Freeze。保留批次分析、CSV／JSON與粒子餘暉功能。
-監督獨立重建顯示資料／生命週期與九套主題保存、117組靜態對比測試通過，最終程式來源逐byte一致。
-使用者原本的「其他儀表正常，只有Stereo Position不動」尚未在實機重現，本版屬顯示與診斷改善，不宣稱已完全修復。可觀察聲像面板內時間是否持續前進；固定mono或固定聲像的相對輪廓可能保持不變。
+1.7.3：Reference 匯入驗證內容／容量，失敗或取消保留原 Reference；新增 Integrated／LRA／估計 TP 的「目前−Reference」差值，未知顯示 —。檔案上限8 MiB、歷史上限50,000點，保留舊版單曲報告相容性。修正特殊檔案阻塞讀取，正常符號連結仍可匯入。
+監督獨立重建20組匯入資料、4組比較、容量臨界與匯入生命週期測試通過；另9組檔案類型／後續匯入恢復／描述元檢查通過。78項最終來源hash核對，App來源與獨立測試副本逐byte相同。
+保留九套主題（含暗黑灰階）、立體聲粒子／餘暉、批次分析與CSV／JSON。黑白小蒼蠅圖示維持一般翅膀。
+使用者原本的「其他儀表正常，只有Stereo Position不動」尚未在實機重現，未宣稱已修復；可觀察聲像面板內時間是否持續前進。
 仍ad-hoc測試簽章，未Apple公證，更新後仍可能重新要求權限；原生GUI／M4 Air／Intel實機、TCC沿用、真實歌曲準確率、App內自動更新仍待驗。
 固定feed目標已設定，但簽章與公開發布、實際下載安裝重啟尚未完成；目前請手動下載安裝。
 
