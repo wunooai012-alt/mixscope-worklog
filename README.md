@@ -4,15 +4,17 @@
 
 這裡記錄實際成果、驗收證據、限制與下一步。每次提交可從 History 查看，不把規格或介面當作已驗證功能。
 
-## 目前版本
+## 下載最新版 1.5.0 測試版
 
-**1.4.0 離線 BPM／Key 測試版**：新增離線音檔節拍／調性實驗估測、啟發式信心、半拍／倍拍候選與手動新歌曲。監督獨立重建核心及 session 測試通過；真實歌曲準確率、即時估測與性能回歸仍待驗證。此 repository 已公開，工作日誌與版本下載均可免登入查看。
+**Code → Download ZIP 現在包含程式。** 解壓 `mixscope-worklog-main.zip` 後，再解壓其中的 `MIXSCOPE-latest.zip`，即可取得 `MIXSCOPE.app` 與使用說明。關閉舊版，再將 App 放進 Applications 並替換。
 
-[下載 1.4.0 測試版與版本說明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.4.0-test)。請選 Assets 中的 MIXSCOPE ZIP；Source code 只含日誌。GitHub 顯示 SHA256 與本機一致，可免登入下載。
+也可[直接下載最新版 App ZIP](https://github.com/wunooai012-alt/mixscope-worklog/raw/refs/heads/main/MIXSCOPE-latest.zip)，省去外層解壓。適用 macOS 13+、Apple Silicon 與 Intel；[版本、SHA256 與安裝說明](LATEST.txt)。每次驗收交付新版本，都會同步替換這個固定檔名並更新本頁。
 
-1.3.2 正式 archive 簽章已由監督獨立驗證；固定 HTTPS feed、另一台電腦下載／安裝／重啟尚未完成。
+**1.5.0 新增**：即時 BPM／Key 實驗估測，8 秒暖機及最近約 30 秒窗口；靜音／訊號中斷會清除舊估測，手動新歌可保留響度與 Reference。修正立體聲假音高、指定高頻混疊及 Demo 節拍誤判。自動啟動／喚醒在未授權時不主動觸發授權。
 
-[下載 1.3.2 測試版與查看版本说明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.3.2-test)。ZIP 已上傳，GitHub 顯示 SHA256 與本機驗收一致；可免登入下載。這是手動下載，非已完成自動更新。
+**仍待驗收**：最終原生 GUI、MacBook Air M4／Intel 實機、真實歌曲準確率、正式 Apple 簽章／公證、更新後保留授權及 App 內自動更新。此包仍是 ad-hoc 測試版；不要將合成測試或免登入下載視為上述項目已完成。自動換歌尚未提供。
+
+工作日誌與下載均已公開，無需登入。[歷史 Releases](https://github.com/wunooai012-alt/mixscope-worklog/releases) 保留先前交付版本。
 
 ## 已驗證與限制
 
@@ -36,7 +38,8 @@ history超過6,000點會降採樣，peak為累計sample最大值，不能用於�
 - **1.3.1**：修正reset／stop／換檔的舊回呼；交付本機測試ZIP。
 - **1.3.2**：合併顯示快照降低記憶體與回呼積壓；修正失敗新檔誤用上一首數據；交付本機測試ZIP。
 - **1.4.0**：交付離線 BPM／Key、信心／候選及手動新歌曲；合成核心與 session 測試獨立重建通過。
-- **目前開發**：擴充音樂估測邊界與合法已知歌曲驗證，量測新增分析的耗時／RSS，再做有限頻率的即時暖機。
+- **1.5.0**：交付即時暖機與30秒窗口、訊號中斷及手動歌曲邊界、拒絕授權後不自動提示，以及簽署工具修正。
+- **目前開發**：真實歌曲、最終原生GUI／實機與長時間效能，以及固定更新feed與跨機更新仍待驗證。
 
 ## 下一階段與驗收條件
 
@@ -68,3 +71,12 @@ history超過6,000點會降採樣，peak為累計sample最大值，不能用於�
 ## 2026-10-05 公開查看與下載
 
 依使用者要求，工作日誌與既有測試版 Releases 已改為公開。可直接分享日誌／下載連結，無需 GitHub 帳號。GitHub 公開下載不代表 App 內自動更新已完成。
+
+## 2026-10-05 1.5.0 最新程式納入 Code 下載
+
+- 根目錄固定提供 `MIXSCOPE-latest.zip` 與 `LATEST.txt`，每輪驗收交付同步替換；下載整個 repository 也會包含可執行 App 的完整 ZIP。
+- 監督核對最終來源快照 44 項 SHA256、ZIP CRC、解壓後 codesign deep strict、1.5.0/build150 與 arm64／x86_64，均通過。
+- 監督由最終來源獨立重建 RealtimeMusicalTests、DemoTempoTests，均 PASS：暖機、靜音窗口退出、訊號中斷與手動邊界；無節奏 Demo 在8／15／30／60秒不產生假BPM。
+- 授權模型測試先前獨立通過；跨版本ad-hoc身分不同已確認，正式Apple簽章仍缺憑證。簽章檢查工具的DR字串解析問題已修正，自身正控制通過。
+- 30秒model節奏性能為開發者證據：1,444,800 frames、最多1個待發布快照；不含SwiftUI或實際硬體擷取，不能冒充長時間實機驗收。
+- 最終原生GUI啟動受自動審核限制，尚未操作；本包以明確未驗事項的測試版交付。

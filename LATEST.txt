@@ -1,0 +1,16 @@
+MIXSCOPE 最新測試版：1.5.0（build 150）
+更新日期：2026-10-05（台灣時間）
+適用：macOS 13+，Apple Silicon（arm64）與 Intel（x86_64）
+檔案：MIXSCOPE-latest.zip
+檔案大小：3559684 bytes
+SHA256：2fcad974b0fed2e32392b77cc8fd5e8edec630eca7b6fab72f72f97f175a70c7
+
+Code → Download ZIP 使用方式：
+1. 解壓 GitHub 下載的 mixscope-worklog-main.zip。
+2. 再解壓裡面的 MIXSCOPE-latest.zip，即可取得 MIXSCOPE.app 與說明文件。
+3. 關閉舊版 App，再將 MIXSCOPE.app 放到 Applications（應用程式）並替換舊版。
+
+新版加入即時 BPM／Key 實驗估測（8 秒暖機／最近約 30 秒窗口）、手動新歌曲與保守未知判定；修正假音高／Demo 節拍誤判，未授權時自動啟動及喚醒不要求新授權。
+這是 ad-hoc 測試版，尚未 Apple 公證，跨版仍可能要重授權；M4 Air／Intel實機、最終原生GUI、真實歌曲準確率與App內自動更新尚未驗收。自動換歌尚未提供。
+
+每次交付通過驗收的新版本，同步替換本檔及 MIXSCOPE-latest.zip，README更新相同版本；舊版保留在Releases或提交歷史。
