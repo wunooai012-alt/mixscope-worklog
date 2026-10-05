@@ -4,19 +4,28 @@
 
 這裡記錄實際成果、驗收證據、限制與下一步。每次提交可從 History 查看，不把規格或介面當作已驗證功能。
 
-## 下載最新版 1.7.3 測試版
+## 下載最新版 1.7.4 測試版
 
 **Code → Download ZIP 現在包含程式。** 解壓 `mixscope-worklog-main.zip` 後，再解壓其中的 `MIXSCOPE-latest.zip`，即可取得 `MIXSCOPE.app` 與使用說明。關閉舊版，再將 App 放進 Applications 並替換。
 
 也可[直接下載最新版 App ZIP](https://github.com/wunooai012-alt/mixscope-worklog/raw/refs/heads/main/MIXSCOPE-latest.zip)，省去外層解壓。適用 macOS 13+、Apple Silicon 與 Intel；[版本、SHA256 與安裝說明](LATEST.txt)。每次驗收交付新版本，都會同步替換這個固定檔名並更新本頁。
 
-**1.7.3 新增**：Reference 報告匯入會檢查內容與容量，讀取失敗或取消保留原 Reference；新增 Integrated、LRA、估計 True Peak 三項「目前 − Reference」差值，缺失顯示「—」。修正特殊檔案可能卡住匯入的問題。保留九套配色（含暗黑灰階）、Stereo Position 粒子、批次分析與 CSV／JSON。
+**1.7.4 新增**：可保存自訂 Integrated LUFS 目標與估計 True Peak ceiling；顯示所需增益、峰值餘裕和等量增益後的 TP 推算，未知數值顯示「—」。保留預設選項、Reference 三項比較、九套配色、立體聲粒子及批次分析。這些設定只供比較，不會改變音訊。
 
 **使用者回報的即時 Stereo Position 停住問題仍待實機確認**：1.7.2 起包含顯示更新與可辨識狀態的改善，沒有宣稱已確認所有根因或已完成原生 Canvas 驗收。單聲道或固定聲像的相對輪廓可能保持不變；可看面板內音訊時間是否持續前進。
 
 **仍待驗收**：最終原生 GUI、MacBook Air M4／Intel 實機、真實歌曲準確率、正式 Apple 簽章／公證、更新後保留授權及 App 內自動更新。此包仍是 ad-hoc 測試版；不要將合成測試或免登入下載視為上述項目已完成。自動換歌尚未提供。
 
 工作日誌與下載均已公開，無需登入。[歷史 Releases](https://github.com/wunooai012-alt/mixscope-worklog/releases) 保留先前交付版本。
+
+## 2026-10-05 1.7.4 自訂目標與峰值餘裕
+
+- 保留初次預設 −14 LUFS／−1 dBTP 與原 presets；新增自訂 Integrated −60～0 LUFS、估計 TP ceiling −12～0 dBTP。這是 App 的設定範圍，不是平台規定，也不限制實際量測值。
+- 兩個欄位完整有效才套用；錯誤、未完成輸入或取消保留舊設定。保存選取與各項上次自訂值，重新讀取遇到損壞資料會明示回退預設；切換歌曲、來源或主題不重設設定。
+- 所需增益＝目標−目前 Integrated（dB）；峰值餘裕＝ceiling−目前最大估計 TP（dB）；推算 TP＝目前估計 TP＋所需增益（dBTP）。只做等量增益推算，不自動處理音訊，不代表 limiter 後結果或標準認證。
+- 監督由封存來源獨立重建 123 項原測試，另加入事先準備的 7 組獨立算術案例，共 144 項檢查通過；涵蓋正負／相等差值、缺失／非有限／溢位、存續與回退，以及修改設定後實際模型 frame、時鐘、TRACK、Reference 與報告維持。另獨立重建 Reference 匯入與並行生命週期回歸通過。
+- 80 項封存來源雜湊、ZIP CRC、解壓簽章、1.7.4/build174、arm64／x86_64 與黑白一般翅膀圖示核對通過。ZIP 4,072,128 bytes，SHA256 `4d1b6eeb40ef5323446b87084e06471d65e78e0c723948b2d80021692d687ec5`。
+- 原生設定視窗、取消按鈕、佈局、真正 App 重啟與 M4／Intel 操作仍待驗證；設定重新讀取的模型測試不能取代實機重啟。Stereo Position 實機問題、TCC 沿用、Apple 正式簽章／公證與 App 內更新仍待完成。本輪沒有重跑未變更的 DSP／粒子長測。
 
 ## 2026-10-05 1.7.3 Reference 匯入與比較
 
@@ -89,6 +98,7 @@ history超過6,000點會降採樣，peak為累計sample最大值，不能用於�
 - **1.7.0**：交付可選立體聲粒子、固定增益、餘暉及獨立 Freeze；33 組音訊與模型生命週期通過，原生視覺待驗。
 - **1.7.2**：新增暗黑灰階、Stereo Position 直接快照更新與診斷狀態、模式切換解除粒子 Freeze。
 - **1.7.3**：新增 Reference 匯入驗證、三項有限差值與取消保留；修正特殊檔案阻塞，獨立核心／模型測試通過。
+- **1.7.4**：自訂響度／TP目標保存、所需增益與峰值餘裕、等量增益TP推算；独立核心／模型測試通過。
 - **目前追蹤**：使用者即時 Stereo Position 實機問題；App 內更新管線、真實歌曲準確率、原生GUI／實機、正式簽章與跨機更新仍待驗證。
 
 ## 下一階段與驗收條件

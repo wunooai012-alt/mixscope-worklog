@@ -1,20 +1,21 @@
-MIXSCOPE 最新測試版：1.7.3（build 173）
+MIXSCOPE 最新測試版：1.7.4（build 174）
 更新日期：2026-10-05（台灣時間）
 適用：macOS 13+，Apple Silicon（arm64）與 Intel（x86_64）
 檔案：MIXSCOPE-latest.zip
-檔案大小：4000491 bytes
-SHA256：843d2e499ce1852325adfb59c52beb8bd01031117176f7f5533ee00e91108ac6
+檔案大小：4072128 bytes
+SHA256：4d1b6eeb40ef5323446b87084e06471d65e78e0c723948b2d80021692d687ec5
 
 Code → Download ZIP 使用方式：
 1. 解壓 GitHub 下載的 mixscope-worklog-main.zip。
 2. 再解壓裡面的 MIXSCOPE-latest.zip，即可取得 MIXSCOPE.app 與說明文件。
 3. 關閉舊版 App，再將 MIXSCOPE.app 放到 Applications（應用程式）並替換舊版。
 
-1.7.3：Reference 匯入驗證內容／容量，失敗或取消保留原 Reference；新增 Integrated／LRA／估計 TP 的「目前−Reference」差值，未知顯示 —。檔案上限8 MiB、歷史上限50,000點，保留舊版單曲報告相容性。修正特殊檔案阻塞讀取，正常符號連結仍可匯入。
-監督獨立重建20組匯入資料、4組比較、容量臨界與匯入生命週期測試通過；另9組檔案類型／後續匯入恢復／描述元檢查通過。78項最終來源hash核對，App來源與獨立測試副本逐byte相同。
-保留九套主題（含暗黑灰階）、立體聲粒子／餘暉、批次分析與CSV／JSON。黑白小蒼蠅圖示維持一般翅膀。
+1.7.4：可保存的自訂 Integrated LUFS 目標／估計 TP ceiling；保留預設−14 LUFS／−1 dBTP與各preset。自訂範圍−60～0 LUFS／−12～0 dBTP，完整有效才套用，無效或取消保留原設定。
+顯示所需增益、峰值餘裕與等量增益TP推算；未知值為—。只供比較，不自動修改音訊，不代表limiter結果或標準認證。
+監督由封存來源獨立重建144項設定／算術／模型檢查及Reference回歸通過；80項來源hash、ZIP/簽章/架構核對通過。原生GUI／設定Sheet／真正App重啟／硬體擷取尚待驗證。
+保留Reference匯入與三項比較、九套配色（含暗黑灰階）、立體聲粒子／餘暉、批次分析與CSV／JSON。圖示為黑白小蒼蠅一般翅膀。
 使用者原本的「其他儀表正常，只有Stereo Position不動」尚未在實機重現，未宣稱已修復；可觀察聲像面板內時間是否持續前進。
-仍ad-hoc測試簽章，未Apple公證，更新後仍可能重新要求權限；原生GUI／M4 Air／Intel實機、TCC沿用、真實歌曲準確率、App內自動更新仍待驗。
+仍ad-hoc測試簽章，未Apple公證，更新後仍可能重新要求權限；M4 Air／Intel實機、TCC沿用、真實歌曲準確率、App內自動更新仍待驗。
 固定feed目標已設定，但簽章與公開發布、實際下載安裝重啟尚未完成；目前請手動下載安裝。
 
 每次交付通過驗收的新版本，同步替換本檔及 MIXSCOPE-latest.zip，README更新相同版本；舊版保留在Releases或提交歷史。
