@@ -1,18 +1,20 @@
-MIXSCOPE 最新測試版：1.7.0（build 170）
+MIXSCOPE 最新測試版：1.7.2（build 172）
 更新日期：2026-10-05（台灣時間）
 適用：macOS 13+，Apple Silicon（arm64）與 Intel（x86_64）
 檔案：MIXSCOPE-latest.zip
-檔案大小：3937269 bytes
-SHA256：4d60259cd209d81d6fab0fbfe0b239eb5a3bae992b78306a291ac42df1e4b364
+檔案大小：3976288 bytes
+SHA256：6ae5196b32e8960a7db883ebf2ad5d1aac3487d21c5a2d6c679cc17c68353091
 
 Code → Download ZIP 使用方式：
 1. 解壓 GitHub 下載的 mixscope-worklog-main.zip。
 2. 再解壓裡面的 MIXSCOPE-latest.zip，即可取得 MIXSCOPE.app 與說明文件。
 3. 關閉舊版 App，再將 MIXSCOPE.app 放到 Applications（應用程式）並替換舊版。
 
-1.7.0 新增立體聲「粒子」顯示，可與分布輪廓切換；可調固定增益、餘暉與獨立 Freeze。使用實際 L/R 樣本，不作隨機抖動；用於即時／Demo，表示聲道／相位分布，不是物理聲源定位，也不提高 LUFS／TP 的量測精度。
-保留 1.6.0 的批次離線分析、CSV／JSON 摘要與八套經典配色。
-監督獨立重建 33 組音訊與生命週期測試通過。開發者前後各 305 秒模型長測通過，最終來源雜湊核對一致；不含原生 Canvas 畫面或音訊硬體。
-這是 ad-hoc 測試版，尚未 Apple 公證，跨版仍可能要重授權；M4 Air／Intel實機、最終原生GUI、真實歌曲準確率與App內自動更新尚未驗收。自動換歌尚未提供。
+1.7.2：配色新增第九套「暗黑灰階」，純黑白灰暗色、灰白訊號線，反相使用空心粒子及ANTI標示。
+Stereo Position直接接收量測快照，新增自己的音訊時間、方向點與Freeze／等待樣本／離線結果狀態；切換顯示模式會解除粒子Freeze。保留批次分析、CSV／JSON與粒子餘暉功能。
+監督獨立重建顯示資料／生命週期與九套主題保存、117組靜態對比測試通過，最終程式來源逐byte一致。
+使用者原本的「其他儀表正常，只有Stereo Position不動」尚未在實機重現，本版屬顯示與診斷改善，不宣稱已完全修復。可觀察聲像面板內時間是否持續前進；固定mono或固定聲像的相對輪廓可能保持不變。
+仍ad-hoc測試簽章，未Apple公證，更新後仍可能重新要求權限；原生GUI／M4 Air／Intel實機、TCC沿用、真實歌曲準確率、App內自動更新仍待驗。
+固定feed目標已設定，但簽章與公開發布、實際下載安裝重啟尚未完成；目前請手動下載安裝。
 
 每次交付通過驗收的新版本，同步替換本檔及 MIXSCOPE-latest.zip，README更新相同版本；舊版保留在Releases或提交歷史。
