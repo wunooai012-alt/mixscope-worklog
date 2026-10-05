@@ -6,13 +6,13 @@
 
 ## 目前版本
 
-**1.4.0 離線 BPM／Key 測試版**：新增離線音檔節拍／調性實驗估測、啟發式信心、半拍／倍拍候選與手動新歌曲。監督獨立重建核心及 session 測試通過；真實歌曲準確率、即時估測與性能回歸仍待驗證。此 repository 為私人工作日誌。
+**1.4.0 離線 BPM／Key 測試版**：新增離線音檔節拍／調性實驗估測、啟發式信心、半拍／倍拍候選與手動新歌曲。監督獨立重建核心及 session 測試通過；真實歌曲準確率、即時估測與性能回歸仍待驗證。此 repository 已公開，工作日誌與版本下載均可免登入查看。
 
-[下載 1.4.0 測試版與版本說明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.4.0-test)。請選 Assets 中的 MIXSCOPE ZIP；Source code 只含日誌。GitHub 顯示 SHA256 與本機一致，需登入此私人 repository。
+[下載 1.4.0 測試版與版本說明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.4.0-test)。請選 Assets 中的 MIXSCOPE ZIP；Source code 只含日誌。GitHub 顯示 SHA256 與本機一致，可免登入下載。
 
 1.3.2 正式 archive 簽章已由監督獨立驗證；固定 HTTPS feed、另一台電腦下載／安裝／重啟尚未完成。
 
-[下載 1.3.2 測試版與查看版本说明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.3.2-test)。ZIP 已上傳，GitHub 顯示 SHA256 與本機驗收一致；需登入此私人 repository。這是手動下載，非已完成自動更新。
+[下載 1.3.2 測試版與查看版本说明](https://github.com/wunooai012-alt/mixscope-worklog/releases/tag/v1.3.2-test)。ZIP 已上傳，GitHub 顯示 SHA256 與本機驗收一致；可免登入下載。這是手動下載，非已完成自動更新。
 
 ## 已驗證與限制
 
@@ -40,7 +40,7 @@ history超過6,000點會降採樣，peak為累計sample最大值，不能用於�
 
 ## 下一階段與驗收條件
 
-1. **更新發布**：維持既有公鑰；驗feed／ZIP簽章與竄改拒絕；另一台實測檢查、下載、安裝、重啟及版本。私人repository本身尚未提供免登入更新feed。
+1. **更新發布**：維持既有公鑰；驗feed／ZIP簽章與竄改拒絕；另一台實測檢查、下載、安裝、重啟及版本。repository已公開；免登入更新feed及跨機更新仍待完成。
 2. **離線BPM／Key可靠性**：擴充速度邊界、弱節奏／倍半拍、和弦／關係大小調、混疊及立體聲不同訊號；合法已知歌曲須記錄來源、標籤與誤差。比較1.3.2與新增分析的耗時／RSS。
 3. **即時換歌**：暖機、保守狀態機與去抖；覆蓋pause、drop及同曲段落誤判；響度是否跟隨重置由明確選項控制。
 4. **批次分析與報告**：可取消、逐檔錯誤隔離、CSV／JSON，接續Reference／自訂目標及獨立超限區段定位。
@@ -63,3 +63,8 @@ history超過6,000點會降採樣，peak為累計sample最大值，不能用於�
 - 1.4.0開發者UI驗過120 BPM／C大調離線fixture及手動新歌曲；本輪系統音訊TCC未完成，前版成功擷取證據不等於本版完整驗收。
 - 已交辦上述可靠性／效能修正，再做即時暖機；正在開發時不重複催辦或同檔修改。
 - 此ZIP含封裝時的小飛行蒼蠅；之後的一般翅膀修訂留待下一包。
+
+
+## 2026-10-05 公開查看與下載
+
+依使用者要求，工作日誌與既有測試版 Releases 已改為公開。可直接分享日誌／下載連結，無需 GitHub 帳號。GitHub 公開下載不代表 App 內自動更新已完成。
