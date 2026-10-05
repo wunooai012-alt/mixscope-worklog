@@ -1,16 +1,18 @@
-MIXSCOPE 最新測試版：1.6.0（build 160）
+MIXSCOPE 最新測試版：1.7.0（build 170）
 更新日期：2026-10-05（台灣時間）
 適用：macOS 13+，Apple Silicon（arm64）與 Intel（x86_64）
 檔案：MIXSCOPE-latest.zip
-檔案大小：3811030 bytes
-SHA256：23fc9e747c2e76939f8412b8774f1e32246c5e6f9ea02ab65c12f5b0f2a3b442
+檔案大小：3937269 bytes
+SHA256：4d60259cd209d81d6fab0fbfe0b239eb5a3bae992b78306a291ac42df1e4b364
 
 Code → Download ZIP 使用方式：
 1. 解壓 GitHub 下載的 mixscope-worklog-main.zip。
 2. 再解壓裡面的 MIXSCOPE-latest.zip，即可取得 MIXSCOPE.app 與說明文件。
 3. 關閉舊版 App，再將 MIXSCOPE.app 放到 Applications（應用程式）並替換舊版。
 
-新版新增可取消批次離線分析、逐檔錯誤隔離、CSV／JSON摘要匯出與八套可記憶配色（6深2淺）。新粒子模式尚未包含，將於後續版本提供。
+1.7.0 新增立體聲「粒子」顯示，可與分布輪廓切換；可調固定增益、餘暉與獨立 Freeze。使用實際 L/R 樣本，不作隨機抖動；用於即時／Demo，表示聲道／相位分布，不是物理聲源定位，也不提高 LUFS／TP 的量測精度。
+保留 1.6.0 的批次離線分析、CSV／JSON 摘要與八套經典配色。
+監督獨立重建 33 組音訊與生命週期測試通過。開發者前後各 305 秒模型長測通過，最終來源雜湊核對一致；不含原生 Canvas 畫面或音訊硬體。
 這是 ad-hoc 測試版，尚未 Apple 公證，跨版仍可能要重授權；M4 Air／Intel實機、最終原生GUI、真實歌曲準確率與App內自動更新尚未驗收。自動換歌尚未提供。
 
 每次交付通過驗收的新版本，同步替換本檔及 MIXSCOPE-latest.zip，README更新相同版本；舊版保留在Releases或提交歷史。
