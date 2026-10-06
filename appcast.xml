@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>MIXSCOPE Updates</title>
+    <link>https://github.com/wunooai012-alt/mixscope-worklog</link>
+    <description>MIXSCOPE 已交付測試版更新</description>
+    <language>zh-TW</language>
+    <item>
+      <title>MIXSCOPE 1.7.4 測試版</title>
+      <sparkle:version>174</sparkle:version>
+      <sparkle:shortVersionString>1.7.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>目前公開交付版本為 1.7.4：自訂響度目標與峰值餘裕。這次補上缺失的更新清單，程式檔與原已交付 ZIP 完全一致。後續功能候選尚未發布；Stereo 即時問題、Apple 正式簽章與跨機安裝仍待驗證。更新前請匯出量測報告。</description>
+      <enclosure url="https://raw.githubusercontent.com/wunooai012-alt/mixscope-worklog/60387ad6816b3ae0e440cc81d2730ac9f7774569/MIXSCOPE-latest.zip" length="4072128" type="application/octet-stream" sparkle:edSignature="AXOmungGnHZEkZTAwPNA1K/ZBkaLuV5ELZqFO8buOCLXIcllmHOWSW69s/4/SPDzrQ5kYtwWzWuFyVQZRV/rCA=="></enclosure>
+    </item>
+  </channel>
+</rss><!-- sparkle-signatures:
+edSignature: +cZWpi8neFoT75mPZrUVh2TuqFl7JSKl79tKlRkyTTMs6GdgZuXvU/nO4FBPqIC1BJMl3XAFWb/fTYy+0vxwDw==
+length: 1510
+-->
