@@ -4,6 +4,17 @@
 
 這裡記錄實際成果、驗收證據、限制與下一步。每次提交可從 History 查看，不把規格或介面當作已驗證功能。
 
+## 2026-10-06 更新檢查 404 已修復
+
+使用者已將 App 移至 Applications 並重啟，仍遇到「An error occurred in retrieving update information」。監督確認內建更新清單原本回傳 HTTP 404；這是發布端缺少檔案，與重複搬移程式無關。
+
+- 已補上 [簽署的 appcast.xml](https://raw.githubusercontent.com/wunooai012-alt/mixscope-worklog/refs/heads/main/appcast.xml)，公開網址回傳 HTTP 200，重新下載內容與本機簽署檔逐 byte 相同。原公鑰和簽章要求維持。
+- 清單只列已交付 **1.7.4（build 174）**，指向固定 Git commit ZIP；4,072,128 bytes，SHA256 `4d1b6eeb40ef5323446b87084e06471d65e78e0c723948b2d80021692d687ec5`，與原公開包相同，latest ZIP 沒有替換。
+- Sparkle 工具及以 App 內嵌公鑰的獨立驗證均通過；改動 feed 與錯誤公鑰會被拒絕。隔離的 Sparkle 原生探測程式已從公開網址載入 build 174，對版本 174 回傳「沒有新版本」（SUSparkleErrorDomain 1001），不再是來源讀取失敗。
+- **本次修復更新檢查，沒有交付新功能版本，也不代表已完成 MacBook Air 跨版本安裝與重啟。** 1.7.7 已封存；分析取樣率、彩色資料圖層與更新錯誤診斷正在後續候選處理，Stereo 即時擷取問題仍需實機驗收。
+
+
+
 ## 2026-10-06 01:47 Key 改善與新工作區驗收
 
 **1.7.6 仍是研究候選，尚未通過 80% 驗收、尚未發布。公開下載維持 1.7.4。**
